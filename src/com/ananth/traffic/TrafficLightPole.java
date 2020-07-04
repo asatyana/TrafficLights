@@ -18,13 +18,13 @@ public class TrafficLightPole {
         return poleId;
     }
 
-    public boolean letTrafficGo() {
+    public boolean letTrafficGo(int NumOfVehicles) {
         if (this.trafficLight.equals(TRAFFIC_LIGHT_RED)) {
-                System.out.print(this.getPoleId() + " - " + this.trafficLight);
+                System.out.print(this.trafficLight);
                 this.trafficLight = TRAFFIC_LIGHT_YELLOW;
                 tick(2);
                 this.trafficLight = TRAFFIC_LIGHT_GREEN;
-                tick(10);
+                tick(NumOfVehicles);
                 this.trafficLight = TRAFFIC_LIGHT_YELLOW;
                 tick(2);
                 this.trafficLight = TRAFFIC_LIGHT_RED;
